@@ -231,13 +231,13 @@ call s:highlight_groups({
 
 " treesitter-rainbow
 call s:highlight_groups({
-  \ 'rainbowcol1': { 'fg': '#f3dbb9' },
-  \ 'rainbowcol2': { 'fg': '#f49190' },
-  \ 'rainbowcol3': { 'fg': '#adc7ff' },
-  \ 'rainbowcol4': { 'fg': '#badb94' },
-  \ 'rainbowcol5': { 'fg': '#c792ea' },
-  \ 'rainbowcol6': { 'fg': '#979287' },
-  \ 'rainbowcol7': { 'fg': '#f75590' },
+  \ 'rainbowcol1': p.fg.rainbow1,
+  \ 'rainbowcol2': p.fg.rainbow2,
+  \ 'rainbowcol3': p.fg.rainbow3,
+  \ 'rainbowcol4': p.fg.rainbow4,
+  \ 'rainbowcol5': p.fg.rainbow5,
+  \ 'rainbowcol6': p.fg.rainbow6,
+  \ 'rainbowcol7': p.fg.rainbow7,
   \ })
 
 " ShowMotion

@@ -29,6 +29,15 @@ function! nightowl2#palette#create() abort
   let p.color.diff_change = p.color.yellow_alt
   let p.color.diff_delete = p.color.red
 
+  " Rainbow colors for rainbow-parentheses
+  let p.color.rainbow1 = '#f3dbb9'
+  let p.color.rainbow2 = '#f49190'
+  let p.color.rainbow3 = '#adc7ff'
+  let p.color.rainbow4 = '#badb94'
+  let p.color.rainbow5 = '#c792ea'
+  let p.color.rainbow6 = '#979287'
+  let p.color.rainbow7 = '#f75590'
+
   " Generate 'transparent' colors for foreground
   let bg_rgb = s:hex2rgb(p.color.bg)
   let fg_rgb = s:hex2rgb(p.color.fg)
