@@ -52,7 +52,7 @@ call s:highlight_groups({
   \ 'FoldColumn'  : p.hidden,
   \ 'Search'      : p.bg.blue25,
   \ 'IncSearch'   : { 'gui': 'bold', 'bg': p.color.blue65 },
-  \ 'Title'       : p.fg.blue,
+  \ 'Title'       : p.fg.bold.blue,
   \ 'VertSplit'   : p.fg.fg5,
   \ 'Visual'      : p.bg.magenta20,
   \
