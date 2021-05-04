@@ -154,6 +154,8 @@ call s:highlight_groups({
 
 " fzf
 let g:fzf_colors = {
+      \ 'fg': ['fg', 'FZFBorder'],
+      \ 'bg': ['bg', 'FZFBorder'],
       \ 'border': ['fg', 'FZFBorder'],
       \ }
 
