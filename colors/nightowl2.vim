@@ -154,11 +154,12 @@ call s:highlight_groups({
 
 " fzf
 let g:fzf_colors = {
-      \ 'fg': ['fg', 'FZFBorder'],
-      \ 'bg': ['bg', 'FZFBorder'],
+      \ 'fg': ['fg', 'Normal'],
+      \ 'bg': ['bg', 'FZFBackground'],
       \ 'border': ['fg', 'FZFBorder'],
       \ }
 
+call s:h("FZFBackground", p.bg.bg)
 call s:h("FZFBorder", p.fg.fg20)
 
 " gitgutter
