@@ -110,14 +110,14 @@ call s:highlight_groups({
   \
   \ 'Special'       : p.fg.blue,
   \ 'SpecialChar'   : p.fg.magenta,
-  \ 'Tag'           : p.fg.fg,
+  \ 'Tag'           : p.fg.italic.lime,
   \ 'Delimiter'     : p.fg.fg,
-  \ 'SpecialComment': p.fg.fg,
+  \ 'SpecialComment': { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
   \ 'Debug'         : p.fg.fg,
   \
   \ 'Underlined': p.fg.fg,
   \ 'Ignore'    : p.fg.fg,
-  \ 'Error'     : p.fg.fg,
+  \ 'Error'     : p.fg.red,
   \ 'Todo'      : { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
   \ })
 
@@ -127,6 +127,11 @@ call s:highlight_groups({
   \ 'vimSet'           : p.fg.bold.orange,
   \ 'vimMapLhs'        : p.fg.orange,
   \ })
+
+" Old highlighting: idris
+call s:link_to('Comment', [
+	\	'idrisPragma',
+  \ ])
 
 " Plugins highlighting
 
