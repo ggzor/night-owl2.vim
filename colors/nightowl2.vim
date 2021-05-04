@@ -25,6 +25,12 @@ function! s:highlight_groups(groups) abort
   endfor
 endfunction
 
+function! s:link_to(target, groups) abort
+  for g in a:groups
+    execute "highlight link" g a:target
+  endfor
+endfunction
+
 let p = nightowl2#palette#create()
 
 " Vim UI
