@@ -81,7 +81,7 @@ call s:highlight_groups({
 
 " Old highlighting
 call s:highlight_groups({
-  \ 'Comment': p.fg.italic.fg50,
+  \ 'Comment': p.fg.fg50,
   \
   \ 'Constant' : p.fg.red,
   \ 'String'   : p.fg.yellow,
@@ -114,7 +114,7 @@ call s:highlight_groups({
   \
   \ 'Special'       : p.fg.blue,
   \ 'SpecialChar'   : p.fg.magenta,
-  \ 'Tag'           : p.fg.italic.lime,
+  \ 'Tag'           : p.fg.lime,
   \ 'Delimiter'     : p.fg.fg,
   \ 'SpecialComment': { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
   \ 'Debug'         : p.fg.fg,
@@ -185,7 +185,7 @@ call s:highlight_groups({
   \ 'TSPunctBracket'  : p.fg.fg,
   \ 'TSPunctSpecial'  : p.fg.magenta,
   \
-  \ 'TSConstant'    : p.fg.italic.red60fg,
+  \ 'TSConstant'    : p.fg.red60fg,
   \ 'TSConstBuiltin': p.fg.red,
   \ 'TSConstMacro'  : p.fg.fg,
   \ 'TSString'      : p.fg.yellow,
@@ -196,12 +196,12 @@ call s:highlight_groups({
   \ 'TSBoolean'     : p.fg.red,
   \ 'TSFloat'       : p.fg.orange,
   \
-  \ 'TSFunction'          : p.fg.italic.blue,
-  \ 'TSFuncBuiltin'       : p.fg.italic.lime,
+  \ 'TSFunction'          : p.fg.blue,
+  \ 'TSFuncBuiltin'       : p.fg.lime,
   \ 'TSFuncMacro'         : p.fg.magenta,
   \ 'TSParameter'         : p.fg.cyan,
   \ 'TSParameterReference': p.fg.fg,
-  \ 'TSMethod'            : p.fg.italic.blue,
+  \ 'TSMethod'            : p.fg.blue,
   \ 'TSField'             : p.fg.cyan,
   \ 'TSProperty'          : p.fg.cyan,
   \ 'TSConstructor'       : p.fg.blue,
@@ -220,28 +220,28 @@ call s:highlight_groups({
   \ 'TSException'      : p.fg.magenta,
   \
   \ 'TSType'       : p.fg.magenta,
-  \ 'TSTypeBuiltin': p.fg.italic.magenta,
+  \ 'TSTypeBuiltin': p.fg.magenta,
   \ 'TSInclude'    : p.fg.magenta,
   \
   \ 'TSVariableBuiltin': p.fg.magenta,
   \
   \ 'TSText'          : p.fg.fg,
   \ 'TSStrong'        : p.fg.bold.fg,
-  \ 'TSEmphasis'      : p.fg.italic.fg,
-  \ 'TSUnderline'     : { 'gui': 'underline,italic', 'fg': p.color.lime },
+  \ 'TSEmphasis'      : p.fg.fg,
+  \ 'TSUnderline'     : { 'gui': 'underline', 'fg': p.color.lime },
   \ 'TSStrike'        : p.fg.fg,
   \ 'TSMath'          : p.fg.fg,
-  \ 'TSTextReference' : p.fg.italic.lime,
+  \ 'TSTextReference' : p.fg.lime,
   \ 'TSEnviroment'    : p.fg.fg,
   \ 'TSEnviromentName': p.fg.orange,
   \ 'TSTitle'         : p.fg.bold.blue,
   \ 'TSLiteral'       : p.fg.magenta,
   \ 'TSURI'           : p.fg.fg,
   \
-  \ 'TSComment': p.fg.italic.fg50,
-  \ 'TSNote'   : p.fg.fg,
-  \ 'TSWarning': p.fg.fg,
-  \ 'TSDanger' : p.fg.fg,
+  \ 'TSComment': p.fg.fg50,
+  \ 'TSNote'   : p.fg.bold.blue,
+  \ 'TSWarning': p.fg.bold.yellow_alt,
+  \ 'TSDanger' : p.fg.bold.red,
   \
   \ 'TSTag'         : p.fg.blue,
   \ 'TSTagDelimiter': p.fg.blue,
