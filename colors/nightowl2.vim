@@ -185,7 +185,7 @@ call s:highlight_groups({
   \ 'TSPunctBracket'  : p.fg.fg,
   \ 'TSPunctSpecial'  : p.fg.magenta,
   \
-  \ 'TSConstant'    : p.fg.red60fg,
+  \ 'TSConstant'    : p.fg.blue60fg,
   \ 'TSConstBuiltin': p.fg.red,
   \ 'TSConstMacro'  : p.fg.fg,
   \ 'TSString'      : p.fg.yellow,
@@ -202,8 +202,8 @@ call s:highlight_groups({
   \ 'TSParameter'         : p.fg.cyan,
   \ 'TSParameterReference': p.fg.fg,
   \ 'TSMethod'            : p.fg.blue,
-  \ 'TSField'             : p.fg.cyan,
-  \ 'TSProperty'          : p.fg.cyan,
+  \ 'TSField'             : p.fg.fg,
+  \ 'TSProperty'          : p.fg.fg,
   \ 'TSConstructor'       : p.fg.blue,
   \ 'TSAnnotation'        : p.fg.magenta,
   \ 'TSAttribute'         : p.fg.magenta,
@@ -219,7 +219,7 @@ call s:highlight_groups({
   \ 'TSKeywordOperator': p.fg.magenta,
   \ 'TSException'      : p.fg.magenta,
   \
-  \ 'TSType'       : p.fg.magenta,
+  \ 'TSType'       : p.fg.magenta85fg,
   \ 'TSTypeBuiltin': p.fg.magenta,
   \ 'TSInclude'    : p.fg.magenta,
   \
