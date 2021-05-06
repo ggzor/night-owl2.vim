@@ -185,7 +185,7 @@ call s:highlight_groups({
   \ 'TSPunctBracket'  : p.fg.fg,
   \ 'TSPunctSpecial'  : p.fg.magenta,
   \
-  \ 'TSConstant'    : p.fg.italic.orange,
+  \ 'TSConstant'    : p.fg.italic.red60fg,
   \ 'TSConstBuiltin': p.fg.red,
   \ 'TSConstMacro'  : p.fg.fg,
   \ 'TSString'      : p.fg.yellow,
