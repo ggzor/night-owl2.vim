@@ -128,7 +128,6 @@ call s:highlight_groups({
 " Old highlighting: vim
 call s:highlight_groups({
   \ 'vimAutoCmdSfxList': p.fg.bold.blue,
-  \ 'vimSet'           : p.fg.bold.orange,
   \ 'vimMapLhs'        : p.fg.orange,
   \ })
 
