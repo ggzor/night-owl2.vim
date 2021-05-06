@@ -161,6 +161,9 @@ let g:fzf_colors = {
 call s:h("FZFBackground", p.bg.bg)
 call s:h("FZFBorder", p.fg.fg20)
 
+" indentLine color
+let g:indentLine_color_gui = p.color.fg15
+
 " gitgutter
 call s:highlight_groups({
   \ 'GitGutterAdd'             : p.fg.diff_add,
