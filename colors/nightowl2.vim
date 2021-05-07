@@ -119,7 +119,7 @@ call s:highlight_groups({
   \ 'SpecialComment': { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
   \ 'Debug'         : p.fg.fg,
   \
-  \ 'Underlined': { 'gui': 'underline,italic', 'fg': p.color.lime },
+  \ 'Underlined': { 'gui': 'underline', 'fg': p.color.lime },
   \ 'Ignore'    : p.fg.fg,
   \ 'Error'     : p.fg.red,
   \ 'Todo'      : { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
@@ -221,7 +221,7 @@ call s:highlight_groups({
   \ 'TSKeywordOperator': p.fg.magenta,
   \ 'TSException'      : p.fg.magenta,
   \
-  \ 'TSType'       : p.fg.magenta85fg,
+  \ 'TSType'       : p.fg.magenta65fg,
   \ 'TSTypeBuiltin': p.fg.magenta,
   \ 'TSInclude'    : p.fg.magenta,
   \
