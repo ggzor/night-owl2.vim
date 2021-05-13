@@ -146,6 +146,7 @@ call s:highlight_groups({
 	\ 'agdaDubious': p.fg.fg,
 	\ 'agdaFunction': p.fg.blue,
 	\ 'agdaOperator': p.fg.cyan,
+	\ 'agdaPragma': p.fg.magenta,
 	\ 'agdaInfixConstructor': p.fg.blue,
 	\ 'agdaInfixFunction': p.fg.magenta,
 	\ 'agdaXXX': p.fg.red,
