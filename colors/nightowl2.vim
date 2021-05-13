@@ -136,6 +136,27 @@ call s:link_to('Comment', [
 	\	'idrisPragma',
   \ ])
 
+" Old highlighting: agda
+call s:highlight_groups({
+	\ 'agdaString': p.fg.yellow,
+	\ 'agdaConstructor': p.fg.blue,
+	\ 'agdaCharCode': p.fg.orange,
+	\ 'agdaCharCodeErr': p.fg.red,
+	\ 'agdaHole': p.fg.red,
+	\ 'agdaDubious': p.fg.fg,
+	\ 'agdaFunction': p.fg.blue,
+	\ 'agdaOperator': p.fg.cyan,
+	\ 'agdaInfixConstructor': p.fg.blue,
+	\ 'agdaInfixFunction': p.fg.magenta,
+	\ 'agdaXXX': p.fg.red,
+  \ })
+hi link agdaNumber Number
+hi link agdaKeywords Keyword
+hi link agdaLineComment Comment
+hi link agdaBlockComment Comment
+hi link agdaTODO Todo
+hi link agdaFIXME Error
+
 " Plugins highlighting
 
 " coc.nvim
