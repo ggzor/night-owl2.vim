@@ -262,7 +262,7 @@ call s:highlight_groups({
   \ 'TSEnviromentName': p.fg.orange,
   \ 'TSTitle'         : p.fg.bold.blue,
   \ 'TSLiteral'       : p.fg.magenta,
-  \ 'TSURI'           : p.fg.fg,
+  \ 'TSURI'           : p.fg.yellow,
   \
   \ 'TSComment': p.fg.fg50,
   \ 'TSNote'   : p.fg.bold.blue,
@@ -271,6 +271,11 @@ call s:highlight_groups({
   \
   \ 'TSTag'         : p.fg.blue,
   \ 'TSTagDelimiter': p.fg.blue,
+  \ })
+
+" Specific language highlighting
+call s:highlight_groups({
+  \ 'htmlTSProperty': p.fg.cyan,
   \ })
 
 " treesitter-rainbow
