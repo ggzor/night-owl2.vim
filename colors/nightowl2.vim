@@ -275,6 +275,9 @@ call s:highlight_groups({
 
 " Specific language highlighting
 call s:highlight_groups({
+  \ 'cssTSProperty': p.fg.magenta,
+  \ 'cssTSType': p.fg.blue,
+  \ 'clojureTSParameter': p.fg.fg,
   \ 'htmlTSProperty': p.fg.cyan,
   \ })
 
