@@ -41,6 +41,7 @@ let p = nightowl2#palette#create()
 call s:highlight_groups({
   \ 'Normal'     : p.fg.fg,
   \ 'EndOfBuffer': p.hidden,
+  \ 'NonText'    : p.fg.magenta,
   \
   \ 'CursorLine'  : p.bg.bg_dark,
   \ 'CursorColumn': p.bg.bg,
@@ -129,6 +130,7 @@ call s:highlight_groups({
 call s:highlight_groups({
   \ 'vimAutoCmdSfxList': p.fg.bold.blue,
   \ 'vimMapLhs'        : p.fg.orange,
+  \ 'vimUserFunc'        : p.fg.blue,
   \ })
 
 " Old highlighting: idris
