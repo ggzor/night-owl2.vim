@@ -130,7 +130,8 @@ call s:highlight_groups({
 call s:highlight_groups({
   \ 'vimAutoCmdSfxList': p.fg.bold.blue,
   \ 'vimMapLhs'        : p.fg.orange,
-  \ 'vimUserFunc'        : p.fg.blue,
+  \ 'vimFunction'      : p.fg.blue,
+  \ 'vimUserFunc'      : p.fg.blue,
   \ })
 
 " Old highlighting: idris
