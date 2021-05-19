@@ -189,6 +189,12 @@ call s:h("FZFBorder", p.fg.fg20)
 " indentLine color
 let g:indentLine_color_gui = p.color.fg15
 
+" vim-fugitive
+call s:highlight_groups({
+  \ 'gitcommitSummary' : p.fg.yellow,
+  \ 'gitcommitOverflow': p.fg.red,
+  \ })
+
 " gitgutter
 call s:highlight_groups({
   \ 'GitGutterAdd'             : p.fg.diff_add,
