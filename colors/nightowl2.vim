@@ -294,3 +294,17 @@ call s:highlight_groups({
 
 " ShowMotion
 call s:h("ShowMotion_CharSearchGroup", { 'fg': 'red', 'gui': 'bold' })
+
+" luochen1990/rainbow
+let g:rainbow_conf = extend(get(g:, 'rainbow_conf', {}), {
+  \   'guifgs': [
+  \     p.color.rainbow1,
+  \     p.color.rainbow2,
+  \     p.color.rainbow3,
+  \     p.color.rainbow4,
+  \     p.color.rainbow5,
+  \     p.color.rainbow6,
+  \     p.color.rainbow7,
+  \   ],
+  \ })
+
