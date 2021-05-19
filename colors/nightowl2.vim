@@ -191,8 +191,11 @@ let g:indentLine_color_gui = p.color.fg15
 
 " vim-fugitive
 call s:highlight_groups({
-  \ 'gitcommitSummary' : p.fg.yellow,
   \ 'gitcommitOverflow': p.fg.red,
+  \ 'gitcommitSelectedFile' : p.fg.lime,
+  \ 'gitcommitDiscardedFile' : p.fg.yellow,
+  \ 'gitcommitUntrackedFile' : p.fg.fg,
+  \ 'gitcommitSummary' : p.fg.yellow,
   \ })
 
 " gitgutter
