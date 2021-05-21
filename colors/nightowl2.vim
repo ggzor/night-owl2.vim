@@ -126,6 +126,11 @@ call s:highlight_groups({
   \ 'Todo'      : { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
   \ })
 
+" Old highlighting: md
+call s:highlight_groups({
+  \ 'mkdBlockquote': p.fg.magenta,
+  \ })
+
 " Old highlighting: vim
 call s:highlight_groups({
   \ 'vimAutoCmdSfxList': p.fg.bold.blue,
@@ -223,7 +228,7 @@ call s:highlight_groups({
   \
   \ 'TSConstant'    : p.fg.blue60fg,
   \ 'TSConstBuiltin': p.fg.red,
-  \ 'TSConstMacro'  : p.fg.fg,
+  \ 'TSConstMacro'  : p.fg.magenta,
   \ 'TSString'      : p.fg.yellow,
   \ 'TSStringRegex' : p.fg.fg,
   \ 'TSStringEscape': p.fg.orange,
@@ -289,6 +294,7 @@ call s:highlight_groups({
   \ 'cssTSType': p.fg.blue,
   \ 'clojureTSParameter': p.fg.fg,
   \ 'htmlTSProperty': p.fg.cyan,
+  \ 'yamlTSField': p.fg.blue,
   \ })
 
 " treesitter-rainbow
