@@ -126,11 +126,6 @@ call s:highlight_groups({
   \ 'Debug'         : p.fg.fg,
   \
   \ 'Underlined': { 'gui': 'underline', 'fg': p.color.lime },
-" Old highlighting: md
-call s:highlight_groups({
-  \ 'mkdBlockquote': p.fg.magenta,
-  \ })
-
   \ 'Ignore'    : p.fg.fg,
   \ 'Error'     : p.fg.red,
   \ 'Todo'      : { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
