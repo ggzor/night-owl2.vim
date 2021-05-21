@@ -77,6 +77,11 @@ call s:highlight_groups({
   \ 'PmenuSel'  : p.bg.bg_blue,
   \ 'PmenuSbar' : p.bg.bg_light,
   \ 'PmenuThumb': p.bg.bg_scroll,
+  \
+  \ 'qfError'    : p.fg.red,
+  \ 'qfFileName' : p.fg.lime,
+  \ 'qfLineNr'   : p.fg.blue,
+  \ 'qfSeparator': p.fg.fg25,
   \ })
 
 
@@ -200,7 +205,7 @@ call s:highlight_groups({
   \ 'gitcommitSelectedFile' : p.fg.lime,
   \ 'gitcommitDiscardedFile' : p.fg.yellow,
   \ 'gitcommitUntrackedFile' : p.fg.fg,
-  \ 'gitcommitSummary' : p.fg.yellow,
+  \ 'gitcommitSummary' : p.fg.fg,
   \ })
 
 " gitgutter
