@@ -190,6 +190,7 @@ call s:highlight_groups({
 let g:fzf_colors = {
       \ 'fg': ['fg', 'Normal'],
       \ 'bg': ['bg', 'FZFBackground'],
+      \ 'gutter': ['bg', 'FZFBackground'],
       \ 'border': ['fg', 'FZFBorder'],
       \ }
 
