@@ -175,6 +175,7 @@ hi link agdaFIXME Error
 
 " coc.nvim
 call s:highlight_groups({
+  \ 'CocFadeOut'     : p.fg.fg50,
   \ 'CocErrorFloat'  : p.fg.red,
   \ 'CocWarningFloat': p.fg.yellow_alt,
   \ 'CocFloating'    : { 'bg': p.color.fg10, 'fg': p.color.fg95 },
