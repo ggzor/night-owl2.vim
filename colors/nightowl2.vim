@@ -82,6 +82,8 @@ call s:highlight_groups({
   \ 'qfFileName' : p.fg.lime,
   \ 'qfLineNr'   : p.fg.blue,
   \ 'qfSeparator': p.fg.fg25,
+  \
+  \ 'WarningMsg': p.fg.bold.yellow_alt,
   \ })
 
 
