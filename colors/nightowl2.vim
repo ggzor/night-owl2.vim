@@ -43,7 +43,7 @@ call s:highlight_groups({
   \ 'EndOfBuffer': p.hidden,
   \ 'NonText'    : p.fg.magenta,
   \
-  \ 'CursorLine'  : p.bg.bg_dark,
+  \ 'CursorLine'  : p.bg.black20,
   \ 'CursorColumn': p.bg.bg,
   \ 'ColorColumn' : p.bg.fg40,
   \ 'CursorLineNr': { 'fg': p.color.fg, 'bg': p.color.fg10 },
