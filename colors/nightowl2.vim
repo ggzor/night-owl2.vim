@@ -221,7 +221,9 @@ call s:highlight_groups({
   \ })
 
 " lightline
-let g:lightline.colorscheme = 'nightowl2'
+if exists('g:lightline')
+  let g:lightline.colorscheme = 'nightowl2'
+end
 
 " vim-highlightedyank
 call s:h("HighlightedyankRegion" , p.bg.yellow_alt15)
