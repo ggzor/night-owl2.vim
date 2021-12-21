@@ -183,8 +183,10 @@ call s:highlight_groups({
   \ 'CocFloating'    : { 'bg': p.color.fg10, 'fg': p.color.fg95 },
   \
   \ 'CocErrorSign'  : p.fg.red,
-  \ 'CocHintSign'  : p.fg.fg40,
+  \ 'CocHintSign'  : p.fg.cyan,
   \ 'CocWarningSign': p.fg.yellow_alt,
+  \
+  \ 'CocRustTypeHint'  : p.fg.cyan40,
   \
   \ 'CocHighlightRead' : p.bg.fg15,
   \ 'CocHighlightWrite': p.bg.fg15,
