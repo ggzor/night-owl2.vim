@@ -10,10 +10,10 @@ jobs:
           version: v0.6.1
       - name: Setup configuration directory
         run: |
-          TARGET_DIR="$HOME/.config/nvim/pack/nightowl2.vim/start"
+          TARGET_DIR="$HOME/.config/nvim/pack/night-owl2.vim/start"
           mkdir --parents "$TARGET_DIR"
           cd "$TARGET_DIR"
-          git clone 'https://github.com/ggzor/nightowl2.vim'
+          git clone 'https://github.com/ggzor/night-owl2.vim'
       - name: Run build.sh
         run: ./build.sh
 
