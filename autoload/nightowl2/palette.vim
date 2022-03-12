@@ -1,7 +1,9 @@
 let s:cache_file = expand('<sfile>:r')..'.json'
 
-function! nightowl2#palette#create() abort
-  if filereadable(s:cache_file)
+function! nightowl2#palette#create(...) abort
+  let disable_cache_file = get(a:, 1, 0)
+
+  if !disable_cache_file && filereadable(s:cache_file)
     let g:__nightowl2_palette_cache = json_decode(readfile(s:cache_file))
   endif
 
@@ -88,7 +90,7 @@ endfunction
 
 function! nightowl2#palette#dump(target) abort
   exec "redir! > "..a:target
-  silent exec "echo json_encode(nightowl2#palette#create())"
+  silent exec "echo json_encode(nightowl2#palette#create(1))"
   redir END
 endfunction
 
