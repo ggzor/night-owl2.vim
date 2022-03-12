@@ -1,0 +1,18 @@
+name: Update palette cache
+on: [push]
+jobs:
+  run-build-sh:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: v0.6.1
+      - name: Setup configuration directory
+        run: |
+          TARGET_DIR="$HOME/.config/nvim/pack/nightowl2.vim/start"
+          mkdir --parents "$TARGET_DIR"
+          cp --target "$TARGET_DIR" --recursive ./*
+      - name: Run build.sh
+        run: ./build.sh
+
