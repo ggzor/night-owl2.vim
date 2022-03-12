@@ -17,7 +17,7 @@ function! nightowl2#palette#create(...) abort
   " Colors
   let p.color = { }
 
-  let p.color.bg = '#011627'
+  let p.color.bg = '#011626'
   let p.color.fg = '#d6deeb'
 
   let p.color.black     = '#536372'
