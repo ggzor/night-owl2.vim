@@ -17,4 +17,11 @@ jobs:
           git clone 'https://github.com/ggzor/night-owl2.vim'
       - name: Run build.sh
         run: ./build.sh
+      - name: Upload updated cache file
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: './autoload/nightowl2/palette.json'
+          message: Update cache file
+          committer_name: GitHub Actions
+          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
 
