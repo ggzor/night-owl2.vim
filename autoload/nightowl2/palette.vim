@@ -1,5 +1,16 @@
+let s:cache_file = expand('<sfile>:r')..'.json'
+
 function! nightowl2#palette#create() abort
+  if filereadable(s:cache_file)
+    let g:__nightowl2_palette_cache = json_decode(readfile(s:cache_file))
+  endif
+
+  if exists('g:__nightowl2_palette_cache')
+    return g:__nightowl2_palette_cache
+  endif
+
   let p = {}
+  let g:__nightowl2_palette_cache = p
 
   " Colors
   let p.color = { }
@@ -73,6 +84,12 @@ function! nightowl2#palette#create() abort
   let p.hidden = { 'fg': p.color.bg, 'bg': p.color.bg }
 
   return p
+endfunction
+
+function! nightowl2#palette#dump(target) abort
+  exec "redir! > "..a:target
+  silent exec "echo json_encode(nightowl2#palette#create())"
+  redir END
 endfunction
 
 function! s:hex2rgb(hex) abort
