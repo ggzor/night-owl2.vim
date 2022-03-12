@@ -11,7 +11,7 @@ endif
 
 let g:colors_name = "nightowl2"
 
-function! s:h(group, style) abort
+function! s:highlight(group, style) abort
   execute "highlight" a:group
     \ "guifg=" (has_key(a:style, "fg")  ? a:style.fg  : "NONE")
     \ "guibg=" (has_key(a:style, "bg")  ? a:style.bg  : "NONE")
@@ -23,15 +23,19 @@ function! s:h(group, style) abort
     \ "term=NONE"
 endfunction
 
+function! s:link(from, to) abort
+  execute "highlight link" a:from a:to
+endfunction
+
 function! s:highlight_groups(groups) abort
   for k in keys(a:groups)
-    call s:h(k, a:groups[k])
+    call s:highlight(k, a:groups[k])
   endfor
 endfunction
 
-function! s:link_to(target, groups) abort
-  for g in a:groups
-    execute "highlight link" g a:target
+function! s:link_groups(target, groups) abort
+  for from in a:groups
+    call s:link(from, a:target)
   endfor
 endfunction
 
@@ -147,7 +151,7 @@ call s:highlight_groups({
   \ })
 
 " Old highlighting: idris
-call s:link_to('Comment', [
+call s:link_groups('Comment', [
 	\	'idrisPragma',
   \ ])
 
@@ -166,12 +170,13 @@ call s:highlight_groups({
 	\ 'agdaInfixFunction': p.fg.magenta,
 	\ 'agdaXXX': p.fg.red,
   \ })
-hi link agdaNumber Number
-hi link agdaKeywords Keyword
-hi link agdaLineComment Comment
-hi link agdaBlockComment Comment
-hi link agdaTODO Todo
-hi link agdaFIXME Error
+
+call s:link('agdaNumber', 'Number')
+call s:link('agdaKeywords', 'Keyword')
+call s:link('agdaLineComment', 'Comment')
+call s:link('agdaBlockComment', 'Comment')
+call s:link('agdaTODO', 'Todo')
+call s:link('agdaFIXME', 'Error')
 
 " Plugins highlighting
 
@@ -200,8 +205,8 @@ let g:fzf_colors = {
       \ 'border': ['fg', 'FZFBorder'],
       \ }
 
-call s:h("FZFBackground", p.bg.bg)
-call s:h("FZFBorder", p.fg.fg20)
+call s:highlight("FZFBackground", p.bg.bg)
+call s:highlight("FZFBorder", p.fg.fg20)
 
 " indentLine color
 let g:indentLine_color_gui = p.color.fg15
@@ -229,10 +234,10 @@ if exists('g:lightline')
 end
 
 " vim-highlightedyank
-call s:h("HighlightedyankRegion" , p.bg.yellow_alt15)
+call s:highlight("HighlightedyankRegion" , p.bg.yellow_alt15)
 
 " hop.nvim
-call s:h("HopUnmatched" , p.fg.fg40)
+call s:highlight("HopUnmatched" , p.fg.fg40)
 
 " treesitter
 call s:highlight_groups({
@@ -323,7 +328,7 @@ call s:highlight_groups({
   \ })
 
 " ShowMotion
-call s:h("ShowMotion_CharSearchGroup", { 'fg': 'red', 'gui': 'bold' })
+call s:highlight("ShowMotion_CharSearchGroup", { 'fg': 'red', 'gui': 'bold' })
 
 " luochen1990/rainbow
 let g:rainbow_conf = extend(get(g:, 'rainbow_conf', {}), {
