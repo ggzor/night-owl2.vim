@@ -12,7 +12,8 @@ jobs:
         run: |
           TARGET_DIR="$HOME/.config/nvim/pack/nightowl2.vim/start"
           mkdir --parents "$TARGET_DIR"
-          cp --target "$TARGET_DIR" --recursive ./*
+          cd "$TARGET_DIR"
+          git clone 'https://github.com/ggzor/nightowl2.vim'
       - name: Run build.sh
         run: ./build.sh
 
