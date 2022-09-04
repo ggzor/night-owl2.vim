@@ -57,16 +57,14 @@ function! nightowl2#palette#create(...) abort
 
   let colors = copy(keys(p.color))
   for color in colors
-    if color !~# "bg"
-      for amount in range(25, 75, 25) + range(5, 95, 5)
-          let color_rgb = s:hex2rgb(p.color[color])
+    for amount in range(25, 75, 25) + range(5, 95, 5)
+        let color_rgb = s:hex2rgb(p.color[color])
 
-          let p.color[color..amount] =
-                \ s:rgb2hex(s:linear_interp(amount / 100.0, bg_rgb, color_rgb))
-          let p.color[color..amount..'fg'] =
-                \ s:rgb2hex(s:linear_interp(amount / 100.0, fg_rgb, color_rgb))
-      endfor
-    endif
+        let p.color[color..amount] =
+              \ s:rgb2hex(s:linear_interp(amount / 100.0, bg_rgb, color_rgb))
+        let p.color[color..amount..'fg'] =
+              \ s:rgb2hex(s:linear_interp(amount / 100.0, fg_rgb, color_rgb))
+    endfor
   endfor
 
   " Generate styles based in colors

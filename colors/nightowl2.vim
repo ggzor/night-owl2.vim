@@ -99,8 +99,8 @@ call s:highlight_groups({
   \ 'String'   : p.fg.yellow,
   \ 'Character': p.fg.yellow,
   \ 'Number'   : p.fg.orange,
-  \ 'Boolean'  : p.fg.fg,
-  \ 'Float'    : p.fg.fg,
+  \ 'Boolean'  : p.fg.red,
+  \ 'Float'    : p.fg.orange,
   \
   \ 'Identifier': p.fg.cyan,
   \ 'Function'  : p.fg.blue,
@@ -135,6 +135,10 @@ call s:highlight_groups({
   \ 'Ignore'    : p.fg.fg,
   \ 'Error'     : p.fg.red,
   \ 'Todo'      : { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta30 },
+  \
+  \ 'DiagnosticUnderlineError': { 'gui': 'undercurl', 'sp': p.color.red },
+  \ 'DiagnosticUnderlineWarn': { 'gui': 'undercurl', 'sp': p.color.yellow_alt },
+  \ 'DiagnosticUnderlineInfo': { 'gui': 'undercurl', 'sp': p.color.blue },
   \ })
 
 " Old highlighting: md
@@ -183,9 +187,12 @@ call s:link('agdaFIXME', 'Error')
 " coc.nvim
 call s:highlight_groups({
   \ 'CocFadeOut'     : p.fg.fg50,
-  \ 'CocErrorFloat'  : p.fg.red,
-  \ 'CocWarningFloat': p.fg.yellow_alt,
-  \ 'CocFloating'    : { 'bg': p.color.fg10, 'fg': p.color.fg95 },
+  \ 'CocErrorFloat'  : { 'bg': p.color.fg10, 'fg': p.color.red },
+  \ 'CocWarningFloat': { 'fg': p.color.yellow_alt },
+  \ 'CocInfoFloat': { 'fg': p.color.blue },
+  \ 'CocHoverFloat'  : { 'bg': p.color.fg10, 'fg': p.color.fg95 },
+  \ 'CocFloatDividingLine' : { 'bg': p.color.bg_light, 'fg': p.color.bg_light95fg },
+  \ 'CocPumSearch': p.fg.bold.fg,
   \
   \ 'CocErrorSign'  : p.fg.red,
   \ 'CocHintSign'  : p.fg.cyan,
@@ -195,6 +202,14 @@ call s:highlight_groups({
   \
   \ 'CocHighlightRead' : p.bg.fg15,
   \ 'CocHighlightWrite': p.bg.fg15,
+  \
+  \ 'CocMarkdownHeader': p.fg.blue,
+  \ 'CocMarkdownLink': p.fg.blue,
+  \
+  \ 'CocSymbolClass': p.fg.yellow,
+  \ 'CocSymbolFunction': p.fg.magenta,
+  \ 'CocSymbolKeyword': p.fg.fg80,
+  \ 'CocSymbolModule': p.fg.fg80,
   \ })
 
 " fzf
