@@ -69,8 +69,8 @@ call s:highlight_groups({
   \ 'ErrorMsg': p.fg.red,
   \
   \ 'DiffAdd'   : p.bg.diff_add15,
-  \ 'DiffChange': p.bg.diff_change15,
-  \ 'DiffText'  : p.bg.diff_delete30,
+  \ 'DiffChange': p.bg.diff_add15,
+  \ 'DiffText'  : p.bg.diff_add30,
   \ 'DiffDelete': { 'bg': p.color.bg_dark, 'fg': p.color.bg_dark },
   \
   \ 'DiffOldAdd'   : p.bg.diff_delete15,
