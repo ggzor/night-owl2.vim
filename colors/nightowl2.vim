@@ -198,7 +198,8 @@ call s:highlight_groups({
   \ 'CocHintSign'  : p.fg.cyan,
   \ 'CocWarningSign': p.fg.yellow_alt,
   \
-  \ 'CocRustTypeHint'  : p.fg.cyan40,
+  \ 'CocInlayHint'     : p.fg.fg60,
+  \ 'CocRustTypeHint'  : p.fg.fg60,
   \
   \ 'CocHighlightRead' : p.bg.fg15,
   \ 'CocHighlightWrite': p.bg.fg15,
@@ -265,7 +266,7 @@ call s:highlight_groups({
   \ '@constant': p.fg.blue60fg,
   \ '@constant.builtin': p.fg.red,
   \ '@constant.macro': p.fg.magenta,
-  \ '@constructor': p.fg.blue,
+  \ '@constructor': p.fg.magenta,
   \ '@exception': p.fg.magenta,
   \ '@field': p.fg.fg,
   \ '@float': p.fg.orange,
@@ -293,6 +294,7 @@ call s:highlight_groups({
   \ '@string.regex': p.fg.fg,
   \ '@symbol': p.fg.fg,
   \ '@tag': p.fg.blue,
+  \ '@tag.attribute': p.fg.lime,
   \ '@tag.delimiter': p.fg.blue,
   \ '@text': p.fg.fg,
   \ '@text.danger': p.fg.bold.red,
@@ -313,6 +315,12 @@ call s:highlight_groups({
   \ '@type.builtin': p.fg.magenta,
   \ '@variable': p.fg.fg,
   \ '@variable.builtin': p.fg.magenta,
+  \
+  \ '@function.css': p.fg.lime,
+  \ '@property.css': p.fg.cyan,
+  \ '@variable.selector.class': p.fg.lime,
+  \ '@variable.selector.id': p.fg.yellow,
+  \ '@field.yaml': p.fg.magenta,
   \ })
 
 " Specific language highlighting
