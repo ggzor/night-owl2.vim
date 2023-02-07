@@ -55,6 +55,7 @@ call s:highlight_groups({
   \ 'MatchParen'  : p.bg.fg20,
   \ 'SignColumn'  : p.hidden,
   \ 'FoldColumn'  : p.hidden,
+  \ 'CurSearch'   : p.bg.blue25,
   \ 'Search'      : p.bg.blue25,
   \ 'IncSearch'   : { 'gui': 'bold', 'bg': p.color.blue65 },
   \ 'Title'       : p.fg.bold.blue,
