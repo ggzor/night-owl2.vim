@@ -287,6 +287,7 @@ call s:highlight_groups({
   \ '@property': p.fg.fg,
   \ '@punctuation.bracket': p.fg.fg,
   \ '@punctuation.delimiter': p.fg.magenta,
+  \ '@punctuation.hidden': p.fg.fg50,
   \ '@punctuation.special': p.fg.magenta,
   \ '@repeat': p.fg.magenta,
   \ '@string': p.fg.yellow,
@@ -298,38 +299,44 @@ call s:highlight_groups({
   \ '@tag.delimiter': p.fg.blue,
   \ '@text': p.fg.fg,
   \ '@text.danger': p.fg.bold.red,
-  \ '@text.emphasis': p.fg.fg,
+  \ '@text.emphasis': { 'gui': 'italic', 'fg': p.color.fg },
   \ '@text.enviroment': p.fg.fg,
   \ '@text.enviroment.name': p.fg.orange,
   \ '@text.literal': p.fg.magenta,
   \ '@text.math': p.fg.fg,
   \ '@text.note': p.fg.bold.blue,
-  \ '@text.reference': p.fg.lime,
+  \ '@text.quote': p.fg.magenta,
+  \ '@text.reference': { 'gui': 'underline', 'fg': p.color.lime },
   \ '@text.strike': p.fg.fg,
   \ '@text.strong': p.fg.bold.fg,
   \ '@text.title': p.fg.bold.blue,
   \ '@text.underline': { 'gui': 'underline', 'fg': p.color.lime },
   \ '@text.uri': p.fg.yellow,
   \ '@text.warning': p.fg.bold.yellow_alt,
-  \ '@type.': p.fg.magenta65fg,
+  \ '@type': p.fg.magenta65fg,
   \ '@type.builtin': p.fg.magenta,
   \ '@variable': p.fg.fg,
   \ '@variable.builtin': p.fg.magenta,
-  \
+  \ })
+
+"" Specific languages
+""" CSS
+call s:highlight_groups({
   \ '@function.css': p.fg.lime,
   \ '@property.css': p.fg.cyan,
   \ '@variable.selector.class': p.fg.lime,
   \ '@variable.selector.id': p.fg.yellow,
-  \ '@field.yaml': p.fg.magenta,
   \ })
-
-" Specific language highlighting
+""" Markdown
 call s:highlight_groups({
-  \ 'cssTSProperty': p.fg.magenta,
-  \ 'cssTSType': p.fg.blue,
-  \ 'clojureTSParameter': p.fg.fg,
-  \ 'htmlTSProperty': p.fg.cyan,
-  \ 'yamlTSField': p.fg.blue,
+  \ '@punctuation.special.heading.markdown': p.fg.fg,
+  \ '@punctuation.special.markdown': p.fg.cyan,
+  \ '@punctuation.special.quote.markdown': p.fg.magenta,
+  \ '@text.literal.markdown': p.fg.fg,
+  \ })
+""" YAML
+call s:highlight_groups({
+  \ '@field.yaml': p.fg.magenta,
   \ })
 
 " treesitter-rainbow
