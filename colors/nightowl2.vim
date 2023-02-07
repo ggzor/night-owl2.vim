@@ -312,7 +312,7 @@ call s:highlight_groups({
   \ '@text.strong': p.fg.bold.fg,
   \ '@text.title': p.fg.bold.blue,
   \ '@text.underline': { 'gui': 'underline', 'fg': p.color.lime },
-  \ '@text.uri': p.fg.yellow,
+  \ '@text.uri': { 'gui': 'underline', 'fg': p.color.lime },
   \ '@text.warning': p.fg.bold.yellow_alt,
   \ '@type': p.fg.magenta65fg,
   \ '@type.builtin': p.fg.magenta,
