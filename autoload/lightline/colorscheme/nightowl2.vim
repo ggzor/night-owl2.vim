@@ -41,7 +41,7 @@ endfunction
 
 function! s:default_segment(p, color) abort
   return [
-        \ [a:p.color.bg_dark, a:color, 1, 1],
+        \ [a:p.color.bg_dark, a:color, 1, 1, 'bold'],
         \ [a:p.color.fg90, a:p.color.bg_dark, 1, 1]]
 endfunction
 
