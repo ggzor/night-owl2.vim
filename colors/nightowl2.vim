@@ -330,11 +330,14 @@ call s:highlight_groups({
   \ })
 """ Markdown
 call s:highlight_groups({
+  \ '@punctuation.delimiter.markdown': p.fg.fg50,
   \ '@punctuation.delimiter.markdown_inline': p.fg.fg50,
   \ '@punctuation.special.heading.markdown': p.fg.fg,
   \ '@punctuation.special.markdown': p.fg.cyan,
   \ '@punctuation.special.quote.markdown': p.fg.magenta,
   \ '@text.literal.markdown_inline': p.fg.yellow,
+  \ '@text.literal.block': p.fg.fg,
+  \ '@label.markdown': p.fg.fg50,
   \ })
 """ YAML
 call s:highlight_groups({
