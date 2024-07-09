@@ -78,6 +78,8 @@ call s:highlight_groups({
   \ 'DiffOldChange': p.bg.diff_delete15,
   \ 'DiffOldText'  : p.bg.diff_delete40,
   \
+  \ 'NormalFloat': p.bg.bg_light,
+  \
   \ 'Pmenu'     : p.bg.bg_light,
   \ 'PmenuSel'  : p.bg.bg_blue,
   \ 'PmenuSbar' : p.bg.bg_light,
@@ -194,6 +196,9 @@ call s:highlight_groups({
   \ 'CocHoverFloat'  : { 'bg': p.color.fg10, 'fg': p.color.fg95 },
   \ 'CocFloatDividingLine' : { 'bg': p.color.bg_light, 'fg': p.color.bg_light95fg },
   \ 'CocPumSearch': p.fg.bold.fg,
+  \ 'CocFloatSbar' : p.bg.bg_light,
+  \ 'CocFloatThumb': p.bg.bg_scroll,
+  \ 'CocFloatActive': p.bg.bg_blue,
   \
   \ 'CocErrorSign'  : p.fg.red,
   \ 'CocHintSign'  : p.fg.cyan,
@@ -227,6 +232,9 @@ call s:highlight("FZFBorder", p.fg.fg20)
 
 " indentLine color
 let g:indentLine_color_gui = p.color.fg15
+" indentmin.nvim
+call s:highlight("IndentLine", p.fg.fg15)
+call s:highlight("IndentLineCurrent", p.fg.fg35)
 
 " vim-fugitive
 call s:highlight_groups({
@@ -236,6 +244,9 @@ call s:highlight_groups({
   \ 'gitcommitUntrackedFile' : p.fg.fg,
   \ 'gitcommitSummary' : p.fg.fg,
   \ })
+
+" Make diff signs have the right color
+highlight! link @punctuation.special.diff NONE
 
 " gitgutter
 call s:highlight_groups({
@@ -321,6 +332,7 @@ call s:highlight_groups({
   \ })
 
 "" Specific languages
+
 """ CSS
 call s:highlight_groups({
   \ '@function.css': p.fg.lime,
@@ -328,6 +340,7 @@ call s:highlight_groups({
   \ '@variable.selector.class': p.fg.lime,
   \ '@variable.selector.id': p.fg.yellow,
   \ })
+
 """ Markdown
 call s:highlight_groups({
   \ '@conceal.markdown_inline': p.fg.fg50,
@@ -341,6 +354,12 @@ call s:highlight_groups({
   \ '@markup.raw.block': p.fg.fg,
   \ '@markup.strong': p.fg.bold.fg,
   \ })
+
+""" Nix
+call s:highlight_groups({
+  \ '@variable.parameter.builtin.nix': p.fg.magenta,
+  \ })
+
 """ YAML
 call s:highlight_groups({
   \ '@field.yaml': p.fg.magenta,
