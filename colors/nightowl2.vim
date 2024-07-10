@@ -299,6 +299,8 @@ call s:highlight_groups({
   \ '@parameter': p.fg.cyan,
   \ '@parameter.reference': p.fg.fg,
   \ '@property': p.fg.fg,
+  \ '@property.json': p.fg.cyan,
+  \ '@property.jsonc': p.fg.cyan,
   \ '@punctuation.bracket': p.fg.fg,
   \ '@punctuation.delimiter': p.fg.magenta,
   \ '@punctuation.hidden': p.fg.fg50,
