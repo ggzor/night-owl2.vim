@@ -199,7 +199,7 @@ call s:highlight_groups({
   \ 'CocPumSearch': p.fg.bold.fg,
   \ 'CocFloatSbar' : p.bg.bg_light,
   \ 'CocFloatThumb': p.bg.bg_scroll,
-  \ 'CocFloatActive': p.bg.bg_blue,
+  \ 'CocFloatActive': p.bg.bg_light90fg,
   \
   \ 'CocErrorSign'  : p.fg.red,
   \ 'CocHintSign'  : p.fg.cyan,
