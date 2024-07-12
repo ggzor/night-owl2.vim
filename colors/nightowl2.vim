@@ -195,7 +195,7 @@ call s:highlight_groups({
   \ 'CocWarningFloat': { 'fg': p.color.yellow_alt },
   \ 'CocInfoFloat': { 'fg': p.color.blue },
   \ 'CocHoverFloat'  : { 'bg': p.color.fg10, 'fg': p.color.fg95 },
-  \ 'CocFloatDividingLine' : { 'bg': p.color.bg_light, 'fg': p.color.bg_light95fg },
+  \ 'CocFloatDividingLine': p.fg.bg_light95fg,
   \ 'CocPumSearch': p.fg.bold.fg,
   \ 'CocFloatSbar' : p.bg.bg_light,
   \ 'CocFloatThumb': p.bg.bg_scroll,
