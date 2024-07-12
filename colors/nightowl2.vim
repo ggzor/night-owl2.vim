@@ -60,6 +60,7 @@ call s:highlight_groups({
   \ 'IncSearch'   : { 'gui': 'bold', 'bg': p.color.blue65 },
   \ 'Title'       : p.fg.bold.blue,
   \ 'VertSplit'   : p.fg.fg5,
+  \ 'WinSeparator': p.fg.fg5,
   \ 'Visual'      : p.bg.magenta20,
   \
   \ 'Folded'    : p.fg.fg35,
