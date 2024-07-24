@@ -143,6 +143,7 @@ call s:highlight_groups({
   \ 'DiagnosticUnderlineError': { 'gui': 'undercurl', 'sp': p.color.red },
   \ 'DiagnosticUnderlineWarn': { 'gui': 'undercurl', 'sp': p.color.yellow_alt },
   \ 'DiagnosticUnderlineInfo': { 'gui': 'undercurl', 'sp': p.color.blue },
+  \ 'DiagnosticUnderlineHint': { 'gui': 'undercurl', 'sp': p.color.cyan },
   \ })
 
 " Old highlighting: md
