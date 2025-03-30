@@ -14,6 +14,8 @@ function! s:build_palette() abort
         \ }
 
   let r.normal.middle = [[p.color.bg_dark, p.color.bg_dark, 1, 1]]
+  let r.normal.error = [[p.color.red, p.color.bg_dark, 1, 1]]
+  let r.normal.warning = [[p.color.yellow_alt, p.color.bg_dark, 1, 1]]
 
   let r.normal.left   = s:default_segment(p, p.color.blue)
   let r.normal.right  = r.normal.left
