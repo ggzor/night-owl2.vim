@@ -278,6 +278,7 @@ call s:highlight_groups({
   \ '@comment': p.fg.fg50,
   \ '@comment.error': { 'gui': 'bold', 'fg': p.color.red, 'bg': p.color.red10 },
   \ '@comment.warning': { 'gui': 'bold', 'fg': p.color.yellow_alt, 'bg': p.color.yellow_alt10 },
+  \ '@comment.note': { 'gui': 'bold', 'fg': p.color.magenta, 'bg': p.color.magenta10 },
   \ '@conditional': p.fg.magenta,
   \ '@constant': p.fg.blue60fg,
   \ '@constant.builtin': p.fg.red,
