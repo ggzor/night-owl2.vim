@@ -399,3 +399,13 @@ let g:rainbow_conf = extend(get(g:, 'rainbow_conf', {}), {
   \   ],
   \ })
 
+" vim-visual-cursors
+
+" VM_Extend for extend
+" MultiCursor for cursor
+call s:highlight_groups({
+  \ 'VM_Mono': { 'fg': p.color.white, 'bg': p.color.cursor },
+  \ 'VM_Cursor': { 'fg': p.color.white, 'bg': p.color.cursor },
+  \ 'VM_Insert': { 'fg': p.color.white, 'bg': p.color.cursor30 },
+  \ })
+call s:link('VM_Extend', 'Visual')

@@ -7,7 +7,7 @@ function! nightowl2#palette#create(...) abort
     let g:__nightowl2_palette_cache = json_decode(readfile(s:cache_file))
   endif
 
-  if exists('g:__nightowl2_palette_cache')
+  if !disable_cache_file && exists('g:__nightowl2_palette_cache')
     return g:__nightowl2_palette_cache
   endif
 
@@ -19,6 +19,7 @@ function! nightowl2#palette#create(...) abort
 
   let p.color.bg = '#011627'
   let p.color.fg = '#d6deeb'
+  let p.color.cursor = '#7e57c2'
 
   let p.color.black     = '#536372'
   let p.color.red       = '#ef5350'
